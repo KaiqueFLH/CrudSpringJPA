@@ -1,9 +1,8 @@
 package net.weg.api.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.Embeddable;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,11 +10,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-public class Habilitacao {
-    @Id
+@Embeddable
+public class SeguroId{
+    private Integer seguradoraId;
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private Long registro, cpf;
-    private String orgaoEmissor;
+    private Integer seguroId;
 }

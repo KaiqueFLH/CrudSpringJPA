@@ -6,14 +6,14 @@ import lombok.*;
 import java.util.Set;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 public class Cliente extends Usuario{
 //    @Id @GeneratedValue(strategy = GenerationType.TABLE) private int id;
 //    @Column(name = "nome",length = 350)
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     private Set<Carro> carro;
     @OneToOne(cascade = CascadeType.PERSIST)
     private Habilitacao habilitacao;
