@@ -1,14 +1,11 @@
 package net.weg.api.service;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import net.weg.api.model.Seguradora;
+import net.weg.api.model.entity.Seguradora;
 import net.weg.api.repository.SeguradoraRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Service
 @AllArgsConstructor
